@@ -56,9 +56,10 @@
 }
 
 .brand__mark {
-  width: 28px;
-  height: 28px;
-  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #0b0b0c;
 }
 
 .brand__text {
@@ -76,13 +77,11 @@
 }
 
 .brand__text em {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-style: normal;
-  font-weight: 500;
-  font-size: var(--fs-label);
+  font-weight: 400;
+  font-size: 0.8125rem;
   line-height: 1;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--ink-3);
   transition: color 240ms var(--ease-drift);
 }
@@ -529,3 +528,6 @@ html.menu-open {
   .footer-nav__group:last-child { grid-column: 4 / 7; }
   .footer-note { grid-column: 1 / 9; }
 }
+
+/* plain nav: no underline accents */
+.nav a::after { display: none !important; }
